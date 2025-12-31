@@ -3,7 +3,7 @@ description: "A new Flutter project."
 
 publish_to: "none"
 
-version: 1.0.0+1
+version: 1.0.0+3
 
 environment:
   sdk: ^3.5.4
@@ -12,10 +12,13 @@ dependencies:
   boxes: ^1.0.2
   cupertino_icons: ^1.0.8
   dio: ^5.8.0+1
+  easy_localization: ^3.0.7+1
   file_picker: ^9.2.1
   flutter:
     sdk: flutter
   flutter_custom_clippers: ^2.1.0
+  flutter_image_compress: ^2.4.0
+  flutter_localization: ^0.3.3
   flutter_secure_storage: ^9.2.4
   fluttertoast: ^8.2.12
   getwidget: ^6.0.0
@@ -28,30 +31,24 @@ dependencies:
   open_file: ^3.5.10
   shared_preferences: ^2.5.3
   standard_searchbar: ^2.1.1
+  table_calendar: ^3.0.9
 
 dev_dependencies:
   flutter_lints: ^4.0.0
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: ^0.14.4
+
+flutter_icons:   # <<-- FIX: was flutter_launcher_icons before
+  android: "launcher_icon"
+  ios: true
+  remove_alpha_ios: true
+  image_path: "assets/images/playstore.png"
+  image_path_ios: "assets/images/appstore.png"
 
 flutter:
   uses-material-design: true
-
   assets:
-    - assets/images/logo.png
-    - assets/images/signup.png
-    - assets/images/SignIn.png
-    - assets/images/image1.png
-    - assets/icons/man.png
-    - assets/images/image3.png
-    - assets/images/paddy.png
-    - assets/icons/leaf.png
-    - assets/images/image5.png
-    - assets/icons/dollar.png
-    - assets/images/man1.png
-    - assets/images/tree.png
-    - assets/icons/leaf.png
-    - assets/icons/support.png
-    - assets/images/general.png
-    - assets/images/general1.png
-    - assets/images/image2.png
+    - assets/images/
+    - assets/icons/
+    - assets/translations/

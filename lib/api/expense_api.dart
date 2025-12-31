@@ -4,8 +4,8 @@ import '../models/expense_model.dart';
 class ExpenseApi {
   final Dio _dio = Dio();
 
-  final String _submitUrl = "http://192.168.8.125:5000/api/esubmit";
-  final String _updateUrl = "http://192.168.8.125:5000/api/eupdate";
+  final String _submitUrl = "https://dearoagro-backend.onrender.com/api/esubmit";
+  final String _updateUrl = "https://dearoagro-backend.onrender.com/api/eupdate";
 
   Future<String> submitExpense(Expense expense) async {
     final response = await _dio.post(_submitUrl, data: expense.toJson());

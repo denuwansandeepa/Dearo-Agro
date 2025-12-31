@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
 
-Future<void> showDeleteProfileDialog(BuildContext context, String userId) async {
+Future<void> showDeleteProfileDialog(
+    BuildContext context, String userId) async {
   return showDialog<void>(
     context: context,
     barrierDismissible: false,
@@ -28,8 +29,15 @@ Future<void> showDeleteProfileDialog(BuildContext context, String userId) async 
           TextButton(
             child: Text('Yes', style: GoogleFonts.poppins(color: Colors.red)),
             onPressed: () async {
-              Navigator.of(context).pop(); // Close the dialog first
-              await deleteUserProfile(context, userId); // Then delete
+              try {
+                Navigator.of(context).pop();
+                await deleteUserProfile(context, userId); // Then delete
+              } catch (e) {
+                print('Failed to delete profile: $e');
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(content: Text('Error: ${e.toString()}')),
+                );
+              }
             },
           ),
         ],
@@ -39,18 +47,47 @@ Future<void> showDeleteProfileDialog(BuildContext context, String userId) async 
 }
 
 Future<void> deleteUserProfile(BuildContext context, String userId) async {
-  final String apiUrl = "http://192.168.8.125:5000/api/users";
-
-  final response = await http.delete(Uri.parse("$apiUrl/$userId"));
-
-  if (response.statusCode == 200) {
+  try {
+    // Show a loading message while deleting
     ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text("Profile deleted successfully")),
+      const SnackBar(content: Text('Deleting profile, please wait...')),
     );
-    Navigator.pushReplacementNamed(context, "/signIn");
-  } else {
+
+    // Fetch user type dynamically
+    final userResponse = await http.get(Uri.parse(
+        "https://dearoagro-backend.onrender.com/api/users/Farmer/$userId"));
+
+    if (userResponse.statusCode != 200) {
+      print("Failed to fetch user info: ${userResponse.body}");
+      throw Exception("Failed to get user type");
+    }
+
+    final userData = jsonDecode(userResponse.body);
+    final userType = userData['userType'];
+
+    if (userType == null) {
+      throw Exception("User type is null or invalid");
+    }
+
+    // Delete user profile
+    final response = await http.delete(Uri.parse(
+        "https://dearoagro-backend.onrender.com/api/users/$userType/$userId"));
+
+    if (response.statusCode == 200) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Profile deleted successfully')),
+      );
+      Navigator.pushReplacementNamed(context, "/signIn");
+    } else {
+      print("Failed to delete profile: ${response.body}");
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Failed to delete profile')),
+      );
+    }
+  } catch (e) {
+    print('Failed to delete profile: $e');
     ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text("Failed to delete profile")),
+      SnackBar(content: Text('Error: ${e.toString()}')),
     );
   }
 }

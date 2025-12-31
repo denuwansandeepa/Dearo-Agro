@@ -5,8 +5,6 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-
-
 class SignupScreen extends StatefulWidget {
   const SignupScreen({super.key});
 
@@ -21,15 +19,28 @@ class _SignupScreenState extends State<SignupScreen> {
   final TextEditingController nameController = TextEditingController();
   final TextEditingController mobileController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
-  final TextEditingController confirmPasswordController = TextEditingController();
+  final TextEditingController confirmPasswordController =
+      TextEditingController();
 
   final List<String> _categories = [
     "Farmer",
     "Marketing Officer",
-    "Super Admin",
+    "Buyer",
   ];
 
   Future<void> signUp() async {
+    if (nameController.text.isEmpty ||
+        mobileController.text.isEmpty ||
+        passwordController.text.isEmpty ||
+        confirmPasswordController.text.isEmpty ||
+        _selectedCategory == null) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+            content: Text("Please fill all fields and select a category")),
+      );
+      return;
+    }
+
     if (passwordController.text != confirmPasswordController.text) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text("Passwords do not match")),
@@ -64,150 +75,235 @@ class _SignupScreenState extends State<SignupScreen> {
 
   @override
   Widget build(BuildContext context) {
-    Size screenSize = MediaQuery.of(context).size;
-    double screenWidth = screenSize.width;
+    final screenWidth = MediaQuery.of(context).size.width;
+    final isTablet = screenWidth >= 600 && screenWidth < 1024;
+    final isDesktop = screenWidth >= 1024;
+    final padding = isDesktop
+        ? 120.0
+        : isTablet
+            ? 50.0
+            : 16.0;
+    final cardPadding = isDesktop
+        ? 48.0
+        : isTablet
+            ? 32.0
+            : 18.0;
+    final headerFontSize = isDesktop
+        ? 32.0
+        : isTablet
+            ? 26.0
+            : 22.0;
+    final arcHeight = isDesktop
+        ? 220.0
+        : isTablet
+            ? 180.0
+            : 150.0;
+    final logoSize = isDesktop
+        ? 180.0
+        : isTablet
+            ? 140.0
+            : 100.0;
+    final buttonFontSize = isDesktop
+        ? 20.0
+        : isTablet
+            ? 18.0
+            : 16.0;
+    final buttonPadding = isDesktop
+        ? 22.0
+        : isTablet
+            ? 18.0
+            : 14.0;
+    final cardWidth = isDesktop ? 500.0 : double.infinity;
 
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back_ios, color: Colors.black),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
-      ),
       backgroundColor: Colors.white,
-      body: LayoutBuilder(
-        builder: (context, constraints) {
-          double maxWidth = constraints.maxWidth;
-          double padding = maxWidth > 600 ? 50.0 : 16.0;
-
-          return SingleChildScrollView(
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: padding, vertical: 16.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Image.asset(
-                    "assets/images/signup.png",
-                    width: screenWidth * 0.5,
-                  ),
-                  const SizedBox(height: 10),
-                  Text(
-                    "Sign-Up",
-                    style: GoogleFonts.poppins(
-                      fontSize: maxWidth > 600 ? 26 : 22,
-                      fontWeight: FontWeight.normal,
-                      color: Colors.black87,
-                    ),
-                  ),
-                  const SizedBox(height: 20),
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 10),
-                    child: DropdownButtonFormField<String>(
-                      value: _selectedCategory,
-                      decoration: InputDecoration(
-                        labelText: "Sign-up Category",
-                        labelStyle: GoogleFonts.poppins(fontSize: 15),
-                        filled: true,
-                        fillColor: Colors.grey[200],
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10),
-                          borderSide: BorderSide.none,
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10),
-                          borderSide: const BorderSide(
-                            color: Color.fromRGBO(87, 164, 91, 0.8),
-                            width: 2,
-                          ),
+      resizeToAvoidBottomInset: false,
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/images/background1.jpg"),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: Stack(
+          children: [
+            Align(
+              alignment: Alignment.topCenter,
+              child: SingleChildScrollView(
+                padding: EdgeInsets.only(
+                  left: padding,
+                  right: padding,
+                  top: arcHeight + 12,
+                  bottom: 24,
+                ),
+                child: SizedBox(
+                  width: cardWidth,
+                  child: Card(
+                    color: Colors.transparent,
+                    elevation: 0,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(22)),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(22),
+                        gradient: LinearGradient(
+                          colors: [
+                            const Color.fromARGB(255, 51, 162, 56).withOpacity(0.80),
+                            const Color.fromARGB(2, 246, 247, 246)
+                                .withOpacity(0.60),
+                          ],
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
                         ),
                       ),
-                      items: _categories.map((String category) {
-                        return DropdownMenuItem<String>(
-                          value: category,
-                          child: Text(category, style: GoogleFonts.poppins(fontSize: 15)),
-                        );
-                      }).toList(),
-                      onChanged: (String? newValue) {
-                        setState(() {
-                          _selectedCategory = newValue;
-                        });
-                      },
-                    ),
-                  ),
-                  _buildTextField(nameController, "Full Name"),
-                  _buildTextField(mobileController, "Mobile Number"),
-                  _buildPasswordField(passwordController, "Password"),
-                  _buildPasswordField(confirmPasswordController, "Confirm Password"),
-                  const SizedBox(height: 20),
-                  SizedBox(
-                    width: maxWidth > 600 ? 400 : double.infinity,
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color.fromRGBO(87, 164, 91, 0.8),
-                        padding: const EdgeInsets.symmetric(vertical: 14),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8),
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(
+                            horizontal: cardPadding, vertical: cardPadding),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              "assets/images/signup.png",
+                              width: logoSize,
+                              height: logoSize,
+                            ),
+                            const SizedBox(height: 10),
+                            Text(
+                              "Sign Up",
+                              style: GoogleFonts.poppins(
+                                fontSize: headerFontSize,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black,
+                              ),
+                            ),
+                            const SizedBox(height: 24),
+                            Padding(
+                              padding: const EdgeInsets.only(bottom: 14),
+                              child: DropdownButtonFormField<String>(
+                                initialValue: _selectedCategory,
+                                decoration: InputDecoration(
+                                  labelText: "Select Category",
+                                  labelStyle: GoogleFonts.poppins(
+                                      fontSize: 15, color: Colors.black),
+                                  filled: true,
+                                  fillColor: Colors.grey[200],
+                                  border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(14),
+                                    borderSide: BorderSide.none,
+                                  ),
+                                  focusedBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(14),
+                                    borderSide: const BorderSide(
+                                      color: Color.fromRGBO(87, 164, 91, 0.8),
+                                      width: 2,
+                                    ),
+                                  ),
+                                ),
+                                items: _categories.map((String category) {
+                                  return DropdownMenuItem<String>(
+                                    value: category,
+                                    child: Text(category,
+                                        style:
+                                            GoogleFonts.poppins(fontSize: 15)),
+                                  );
+                                }).toList(),
+                                onChanged: (String? newValue) {
+                                  setState(() {
+                                    _selectedCategory = newValue;
+                                  });
+                                },
+                              ),
+                            ),
+                            _buildTextField(nameController, "Full Name",
+                                isDesktop, isTablet),
+                            _buildTextField(mobileController, "Mobile Number",
+                                isDesktop, isTablet),
+                            _buildPasswordField(passwordController, "Password",
+                                isDesktop, isTablet),
+                            _buildPasswordField(confirmPasswordController,
+                                "Confirm Password", isDesktop, isTablet),
+                            const SizedBox(height: 24),
+                            SizedBox(
+                              width: double.infinity,
+                              child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor:
+                                      const Color.fromARGB(255, 15, 59, 18),
+                                  padding: EdgeInsets.symmetric(
+                                      vertical: buttonPadding),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(14),
+                                  ),
+                                  elevation: 2,
+                                ),
+                                onPressed: signUp,
+                                child: Text(
+                                  "Sign Up",
+                                  style: GoogleFonts.poppins(
+                                    fontSize: buttonFontSize,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(height: 16),
+                            RichText(
+                              text: TextSpan(
+                                text: "Already have an account? ",
+                                style: GoogleFonts.poppins(color: Colors.black),
+                                children: [
+                                  TextSpan(
+                                    text: "Sign In",
+                                    style: GoogleFonts.poppins(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                    recognizer: TapGestureRecognizer()
+                                      ..onTap = () {
+                                        Navigator.pushNamed(context, "/signIn");
+                                      },
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
                         ),
                       ),
-                      onPressed: signUp,
-                      child: Text(
-                        "Sign Up",
-                        style: GoogleFonts.poppins(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                        ),
-                      ),
                     ),
                   ),
-                  const SizedBox(height: 10),
-                  RichText(
-                    text: TextSpan(
-                      text: "Do you have an account? ",
-                      style: GoogleFonts.poppins(color: Colors.black),
-                      children: [
-                        TextSpan(
-                          text: "Sign-In",
-                          style: GoogleFonts.poppins(
-                            color: const Color.fromRGBO(87, 164, 91, 0.8),
-                          ),
-                          recognizer: TapGestureRecognizer()
-                            ..onTap = () {
-                              Navigator.pushNamed(context, "/signIn");
-                            },
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
+                ),
               ),
             ),
-          );
-        },
+          ],
+        ),
       ),
     );
   }
 
-  Widget _buildTextField(TextEditingController controller, String label) {
+  Widget _buildTextField(TextEditingController controller, String label,
+      bool isDesktop, bool isTablet) {
+    final fontSize = isDesktop
+        ? 18.0
+        : isTablet
+            ? 16.0
+            : 15.0;
     return Padding(
-      padding: const EdgeInsets.only(bottom: 10),
+      padding: const EdgeInsets.only(bottom: 14),
       child: TextField(
         controller: controller,
         decoration: InputDecoration(
           labelText: label,
-          labelStyle: GoogleFonts.poppins(fontSize: 15),
+          labelStyle:
+              GoogleFonts.poppins(fontSize: fontSize, color: Colors.black),
           filled: true,
           fillColor: Colors.grey[200],
           border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(14),
             borderSide: BorderSide.none,
           ),
           focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(14),
             borderSide: const BorderSide(
               color: Color.fromRGBO(87, 164, 91, 0.8),
               width: 2,
@@ -218,15 +314,22 @@ class _SignupScreenState extends State<SignupScreen> {
     );
   }
 
-  Widget _buildPasswordField(TextEditingController controller, String label) {
+  Widget _buildPasswordField(TextEditingController controller, String label,
+      bool isDesktop, bool isTablet) {
+    final fontSize = isDesktop
+        ? 18.0
+        : isTablet
+            ? 16.0
+            : 15.0;
     return Padding(
-      padding: const EdgeInsets.only(bottom: 10),
+      padding: const EdgeInsets.only(bottom: 14),
       child: TextField(
         controller: controller,
         obscureText: !_isPasswordVisible,
         decoration: InputDecoration(
           labelText: label,
-          labelStyle: GoogleFonts.poppins(fontSize: 15),
+          labelStyle:
+              GoogleFonts.poppins(fontSize: fontSize, color: Colors.black),
           suffixIcon: IconButton(
             onPressed: () {
               setState(() {
@@ -240,11 +343,11 @@ class _SignupScreenState extends State<SignupScreen> {
           filled: true,
           fillColor: Colors.grey[200],
           border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(14),
             borderSide: BorderSide.none,
           ),
           focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(14),
             borderSide: const BorderSide(
               color: Color.fromRGBO(87, 164, 91, 0.8),
               width: 2,

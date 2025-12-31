@@ -6,6 +6,8 @@ class Cultivation {
   final String startDate;
   final String district;
   final String city;
+  final String nic;
+  final num cropYieldSize;
   final String? id;
 
   Cultivation({
@@ -16,6 +18,8 @@ class Cultivation {
     required this.startDate,
     required this.district,
     required this.city,
+    required this.nic,
+    required this.cropYieldSize,
     this.id,
   });
 
@@ -28,6 +32,8 @@ class Cultivation {
       "startDate": startDate,
       "district": district,
       "city": city,
+      "nic": nic,
+      "cropYieldSize": cropYieldSize,
     };
     if (id != null) data["id"] = id!;
     return data;
@@ -43,6 +49,8 @@ class Cultivation {
       startDate: json['startDate'],
       district: json['district'],
       city: json['city'],
+      nic: json['nic'],
+      cropYieldSize: json['cropYieldSize'],
     );
   }
 }

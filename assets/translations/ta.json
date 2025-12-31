@@ -1,0 +1,209 @@
+{
+  "sign_in": "உள்நுழைக",
+  "sign_up": "பதிவுசெய்",
+  "mobile_number": "மொபைல் எண்",
+  "password": "கடவுச்சொல்",
+  "confirm_password": "கடவுச்சொல்லை உறுதிப்படுத்து",
+  "full_name": "முழு பெயர்",
+  "select_user_type": "பயனர் வகையைத் தேர்ந்தெடுக்கவும்",
+  "signup_category": "பதிவுச் செய் வகை",
+  "sign_in_button": "உள்நுழைக",
+  "sign_up_button": "பதிவுசெய்",
+  "no_account": "கணக்கு இல்லையா?",
+  "have_account": "ஏற்கனவே கணக்கு உள்ளதா?",
+  "sign_up_here": "பதிவுசெய்",
+  "sign_in_here": "உள்நுழைக",
+  "farmer": "விவசாயி",
+  "marketing_officer": "மார்க்கெட்டிங் அலுவலர்",
+  "buyer": "வாங்குபவர்",
+  "hi_user": "வணக்கம் பயனர்",
+  "cultivational_details": "விளைச்சல் விவரங்கள்",
+  "crop_updates": "பயிர் மேம்படுத்தல்கள்",
+  "cultivational_expenses": "விளைச்சல் செலவுகள்",
+  "stock_details": "பங்கு விவரங்கள்",
+  "order_details": "ஆர்டர் விவரங்கள்",
+  "inquiries": "விசாரணைகள்",
+  "home": "முகப்பு",
+  "test": "சோதனை",
+  "calendar": "திகதி நாட்காட்டி",
+  "profile": "சுயவிவரம்",
+  "good_morning":"காலை வணக்கம்",
+  "good_afternoon":"மதிய வணக்கம்",
+  "good_night":"இனிய இரவு",
+  "user":"பயனர்",
+  "profile_image_updated": "சுயவிவர படம் புதுப்பிக்கப்பட்டது",
+  "failed_update_image": "படத்தை புதுப்பிக்க முடியவில்லை",
+  "something_went_wrong": "ஏதோ தவறு ஏற்பட்டுள்ளது",
+  "profile_deleted_success": "சுயவிவரம் வெற்றிகரமாக நீக்கப்பட்டது",
+  "failed_delete_profile": "சுயவிவரத்தை நீக்க முடியவில்லை",
+  "loading": "ஏற்றுகிறது...",
+  "user_not_found": "பயனர் காணவில்லை",
+  "unknown": "அறியப்படாதது",
+  "error_loading_profile": "சுயவிவரம் ஏற்றும் போது பிழை",
+  "no_name": "பெயர் இல்லை",
+
+
+  "submit_soil_test_report": "மண் பரிசோதனை அறிக்கையை சமர்ப்பிக்கவும்",
+  "edit_soil_test_report": "மண் பரிசோதனை அறிக்கையை திருத்தவும்",
+  "soil_ph": "மண் pH",
+  "example_soil_ph": "உதா. 6.5",
+  "nitrogen": "நைட்ரஜன் (N)",
+  "example_nitrogen": "உதா. 20 mg/kg",
+  "phosphorus": "பாஸ்பரஸ் (P)",
+  "example_phosphorus": "உதா. 15 mg/kg",
+  "potassium": "பொட்டாசியம் (K)",
+  "example_potassium": "உதா. 30 mg/kg",
+  "micronutrients": "மைக்ரோநியூட்ரியன்ட்ஸ்",
+  "example_micronutrients": "உதா. ஜிங்க், இரும்பு, போரான்",
+  "soil_texture": "மண் அமைப்பு",
+  "sandy": "மணல்",
+  "clay": "களிமண்",
+  "loam": "லோம்",
+  "select_soil_texture": "மண் அமைப்பைத் தேர்வுசெய்க",
+  "submit_report": "அறிக்கையை சமர்ப்பிக்கவும்",
+  "update_report": "அறிக்கையை புதுப்பிக்கவும்",
+  "please_enter": "உள்ளிடவும்",
+  "user_not_logged_in": "பயனர் உள்நுழையவில்லை",
+  "failed_submit_report": "அறிக்கையை சமர்ப்பிக்க முடியவில்லை.",
+
+  "welcome_title": "வணக்கம்!",
+  "sign_in_success": "நீங்கள் வெற்றிகரமாக உள்நுழைந்துள்ளீர்கள்.",
+  "redirect_farmer_dashboard": "விவசாயி டாஷ்போர்டுக்குத் திருப்பிச் செல்லப்படுகிறது...",
+
+
+  "crop_calendar": "பயிர் காலண்டர்",
+  "select_date_info": "பயிர் விவரங்களை காண தேதி தேர்ந்தெடுக்கவும்.",
+
+  "edit_profile": "சுயவிவரத்தைத் திருத்து",
+  "enter_full_name": "முழுப் பெயரை உள்ளிடவும்",
+  "user_type": "பயனர் வகை",
+  "enter_mobile_number": "மொபைல் எண்ணை உள்ளிடவும்",
+  "update": "புதுப்பி",
+  "updating": "புதுப்பிக்கப்படுகிறது...",
+  "update_success": "✅ சுயவிவரம் வெற்றிகரமாக புதுப்பிக்கப்பட்டது!",
+  "update_failed": "❌ புதுப்பிப்பு தோல்வியடைந்தது: {{error}}",
+  "error": "❗ பிழை: {{error}}",
+  "fill_at_least_one": "குறைந்தது ஒரு புலத்தை நிரப்பவும்.",
+
+
+  "confirm_delete_account": "கணக்கை நீக்க உறுதிப்படுத்தவும்",
+  "are_you_sure_delete": "உங்கள் கணக்கை நீக்க விரும்புகிறீர்களா?",
+  "no": "இல்லை",
+  "yes": "ஆம்",
+  "deleting_profile_wait": "கணக்கு நீக்கப்படுகிறது, தயவு செய்து காத்திருக்கவும்...",
+
+
+  "password_change": "கடவுச்சொல் மாற்றம்",
+  "current_password": "தற்போதைய கடவுச்சொல்",
+  "enter_current_password": "தற்போதைய கடவுச்சொல்லை உள்ளிடவும்",
+  "new_password": "புதிய கடவுச்சொல்",
+  "minimum_6_characters": "குறைந்தபட்சம் 6 எழுத்துகள் தேவை",
+  "confirm_your_password": "உங்கள் கடவுச்சொல்லை உறுதிப்படுத்தவும்",
+  "change_password": "கடவுச்சொல்லை மாற்றவும்",
+  "new_and_confirm_mismatch": "புதிய கடவுச்சொல் மற்றும் உறுதிப்படுத்தும் கடவுச்சொல் பொருந்தவில்லை.",
+  "password_updated_success": "✅ கடவுச்சொல் வெற்றிகரமாக புதுப்பிக்கப்பட்டது!",
+
+
+   "confirm_logout": "வெளியேற உறுதிப்படுத்தவும்",
+  "are_you_sure_logout": "நீங்கள் வெளியேற விரும்புகிறீர்களா?",
+  "cancel": "ரத்து செய்",
+  "logout": "வெளியேறு",
+  "logged_out_success": "வெற்றிகரமாக வெளியேறியது",
+
+  
+  "cultivation_details": "விவசாய விவரங்கள்",
+  "days_remaining": "விவசாயத்திற்கு மீதமுள்ள நாட்கள்:",
+  "no_data": "விவசாய தரவு இல்லை",
+  "member_id": "உறுப்பினர் ஐடி",
+  "category": "வகை",
+  "crop": "பயிர்",
+  "location": "இடம்",
+  "start_date": "தொடக்க தேதி",
+  "nic": "தேசிய அடையாள எண்",
+  "crop_yield_size": "பயிர் மகசூல் அளவு",
+  "confirm_delete": "அழிப்பதை உறுதிப்படுத்து",
+  "confirm_delete_msg": "இந்த விவசாயத்தை நீக்க விரும்புகிறீர்களா?",
+  "delete": "அழிக்கவும்",
+  "acres": "ஏக்கர்",
+
+
+  "edit_your_details": "உங்கள் விபரங்களை திருத்தவும்",
+  "add_cultivation": "பயிர்ச்சி சேர்க்கவும்",
+  "edit_cultivation": "பயிர்ச்சியை திருத்தவும்",
+  "select_category": "வகையைத் தேர்வு செய்யவும்*",
+  "select_crop": "பயிரைத் தேர்வு செய்யவும்*",
+  "select_district": "மாவட்டத்தை தேர்வு செய்யவும்*",
+  "select_city": "நகரத்தை தேர்வு செய்யவும்*",
+  "location_address": "முகவரி*",
+  "submit": "சமர்ப்பிக்கவும்",
+  "required_field_error": "இந்த புலம் தேவைப்படுகிறது",
+  "please_fill_required": "தயவுசெய்து அனைத்து தேவையான புலங்களை பூர்த்தி செய்யவும் (பயிர் விளைச்சல் அளவை தேர்வு செய்யவும்)",
+  "crop_yield_size_text": "பயிர் விளைச்சல் அளவு: {} ஏக்கர்",
+
+
+
+    "new_update_form": {
+    "new_crop_update": "புதிய பயிர் புதுப்பிப்பு",
+    "edit_crop_update": "பயிர் புதுப்பிப்பை திருத்தவும்",
+    "date": "தேதி",
+    "please_select_date": "தேதியை தேர்ந்தெடுக்கவும்",
+    "select_crop_update": "பயிர் புதுப்பிப்பை தேர்ந்தெடுக்கவும்",
+    "please_select_crop_update": "தயவுசெய்து பயிர் புதுப்பிப்பை தேர்ந்தெடுக்கவும்",
+    "fertilizer_type": "உரம் வகை",
+    "please_select_fertilizer_type": "உரம் வகையை தேர்ந்தெடுக்கவும்",
+    "amount": "அளவு",
+    "enter_amount": "அளவை உள்ளிடவும்",
+    "enter_valid_number": "சரியான எண்ணை உள்ளிடவும்",
+    "unit": "அலகு",
+    "select_unit": "அலகை தேர்ந்தெடுக்கவும்",
+    "description_label": "பயிர் புதுப்பிப்பு குறித்த விவரம்..",
+    "please_enter_description": "தயவுசெய்து விவரத்தை உள்ளிடவும்",
+    "submit": "சமர்ப்பிக்கவும்",
+    "update": "புதுப்பிக்கவும்",
+    "days_since_planting": "நட்டு வைத்து கடந்த நாட்கள்: ",
+
+    
+  
+  "crop_updates": {
+    "soil_preparation": "பூமி தயாரிப்பு",
+    "seed_selection_and_nursery": "விதைத் தேர்வு மற்றும் நர்சரி",
+    "transplanting": "நட்டு விதைத்தல் (நடவு)",
+    "fertilizing": "உரம் போடுதல்",
+    "watering": "நீர்ப்பாசனம்",
+    "weeding_and_control": "களைப்படுத்துதல் மற்றும் பூச்சிக்கொலை",
+    "growth_monitoring": "வளர்ச்சி கண்காணிப்பு",
+    "yield_estimation": "மக்காச்சீலை மதிப்பீடு",
+    "harvesting": "அறுவடை",
+    "storage": "அறுவடை சேமிப்பு",
+    "distribution": "அறுவடை பகிர்வு"
+  }
+}
+,
+
+    
+    "fertilizer_types": {
+      "organic":"உரிகமான உரம் (Organic)",
+      "chemical":"ராசாயன உரம் (Chemical)",
+      "mixed":"கலப்பு உரம் (Mixed or Compound)"
+    },
+
+    
+    "units": [
+      "Kg",
+      "g",
+      "l",
+      "ml"
+    ],
+
+  "no_updates": "பயிர் புதுப்பிப்புகள் இல்லை",
+  "planting_days": "நடவு செய்ததிலிருந்து கடந்த நாட்கள்: {days}",
+  "fertilizer_type": "உரம் வகை: {{type}}",
+  "fertilizer_amount": "உரம் அளவு: {{amount}} {{unit}}",
+  "delete_message": "இந்த பயிர் புதுப்பிப்பை நீக்க விரும்புகிறீர்களா?"
+  }
+
+
+
+
+
+

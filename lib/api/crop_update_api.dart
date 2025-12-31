@@ -10,20 +10,29 @@ class CropUpdateApi {
     return await _storage.read(key: "userId");
   }
 
-  Future<String> submitCropUpdate(CropUpdate update, {bool isUpdate = false}) async {
+  Future<String> submitCropUpdate(CropUpdate update,
+      {bool isUpdate = false}) async {
     final userId = await _getUserId();
     if (userId == null) throw Exception("User not logged in");
 
     update.memberId = userId;
 
     final url = isUpdate
-        ? "http://192.168.8.125:5000/api/cropupdate"
-        : "http://192.168.8.125:5000/api/cropsubmit";
+        ? "https://dearoagro-backend.onrender.com/api/cropupdate"
+        : "https://dearoagro-backend.onrender.com/api/cropsubmit";
 
-    final response = isUpdate
-        ? await _dio.put(url, data: update.toJson())
-        : await _dio.post(url, data: update.toJson());
+    try {
+      final response = isUpdate
+          ? await _dio.put(url, data: update.toJson())
+          : await _dio.post(url, data: update.toJson());
 
-    return response.data["message"];
+      if (response.statusCode == 200 || response.statusCode == 201) {
+        return response.data["message"];
+      } else {
+        throw Exception("Failed to submit crop update: ${response.statusCode}");
+      }
+    } catch (e) {
+      throw Exception("Error submitting crop update: ${e.toString()}");
+    }
   }
 }

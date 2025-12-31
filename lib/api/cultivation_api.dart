@@ -3,7 +3,7 @@ import '../models/cultivation_model.dart';
 
 class CultivationApi {
   final Dio _dio = Dio();
-  final String baseUrl = "http://192.168.8.125:5000/api";
+  final String baseUrl = "https://dearoagro-backend.onrender.com/api";
 
   Future<String> submitOrUpdateCultivation(Cultivation cultivation, {bool isUpdate = false}) async {
     final url = "$baseUrl/${isUpdate ? 'update' : 'submit'}";

@@ -1,0 +1,213 @@
+{
+  "sign_in": "ඇතුල් වන්න",
+  "sign_up": "ලියාපදිංචි වන්න",
+  "mobile_number": "ජංගම දුරකථන අංකය",
+  "password": "මුරපදය",
+  "confirm_password": "මුරපදය තහවුරු කරන්න",
+  "full_name": "සම්පූර්ණ නම",
+  "select_user_type": "පරිශීලක වර්ගය තෝරන්න",
+  "signup_category": "ලියාපදිංචි වර්ගය",
+  "sign_in_button": "ඇතුල් වන්න",
+  "sign_up_button": "ලියාපදිංචි වන්න",
+  "no_account": "ගිණුමක් නැද්ද?",
+  "have_account": "ඔබට දැනටමත් ගිණුමක් තිබේද?",
+  "sign_up_here": "ලියාපදිංචි වන්න",
+  "sign_in_here": "ඇතුල් වන්න",
+  "farmer": "ගොවියෙකු",
+  "marketing_officer": "අලෙවිකරණ නිළධාරි",
+  "buyer": "ගැනුම්කරු",
+  "hi_user": "හෙලෝ පරිශීලකයාණෙනි",
+  "cultivational_details": "වගා විස්තර",
+  "crop_updates": "වගා තත්වය අලුත් කරන්න",
+  "cultivational_expenses": "වගා වියදම්",
+  "stock_details": "තොග විස්තර",
+  "order_details": "ඇනවුම් විස්තර",
+  "inquiries": "විමසුම්",
+  "home": "මුල් පිටුව",
+  "test": "පරීක්ෂණය",
+  "calendar": "දින දර්ශනය",
+  "profile": "ගිණුම",
+  "good_morning":"සුභ උදෑසනක්",
+  "good_afternoon":"සුභ දවල් වෙලාවක්",
+  "good_night":"සුභ රාත්‍රියක්",
+  "user":"පරිශීලක",
+  "edit_profile": "ගිණුම අලුත් කරන්න",
+  "delete_profile": "ගිණුම මකන්න",
+  "change_password": "මුරපදය වෙනස් කරන්න",
+  "logout": "පිටවීම",
+  "profile_image_updated": "පැතිකඩ රූපය යාවත්කාලීන විය",
+  "failed_update_image": "රූපය යාවත්කාලීන කිරීමට නොහැකි විය",
+  "something_went_wrong": "කිසිවක් වැරදි විය",
+  "profile_deleted_success": "ගිණුම සාර්ථකව මකා දැමිය",
+  "failed_delete_profile": "ගිණුම මකා දැමීම අසාර්ථක විය",
+  "loading": "පූරණය වෙමින්...",
+  "user_not_found": "පරිශීලකයා සොයාගෙන නැත",
+  "unknown": "නොදන්නා",
+  "error_loading_profile": "ගිණුම පූරණය කිරීමේ දෝෂයක්",
+  "no_name": "නම නොමැත",
+
+
+  "submit_soil_test_report": "පරික්ෂණ වාර්තාව",
+  "edit_soil_test_report": "වාර්තාව සංස්කරණය",
+  "soil_ph": "මැටි pH",
+  "example_soil_ph": "උදා. 6.5",
+  "nitrogen": "නයිට්‍රජන් (N)",
+  "example_nitrogen": "උදා. 20 mg/kg",
+  "phosphorus": "ෆොස්ෆරස් (P)",
+  "example_phosphorus": "උදා. 15 mg/kg",
+  "potassium": "පොටෑසියම් (K)",
+  "example_potassium": "උදා. 30 mg/kg",
+  "micronutrients": "ක්ෂුද්‍ර පෝෂක",
+  "example_micronutrients": "උදා. සින්ක්, අයරන්, බොරොන්",
+  "soil_texture": " පසේ ස්වභාවය",
+  "sandy": "වැලි මැටි භූමිය",
+  "clay": "හික් මැටි භූමිය",
+  "loam": "ලෝම් මැටි භූමිය",
+  "select_soil_texture": "කරුණාකර මැටි වර්ගය තෝරන්න",
+  "submit_report": "වාර්තාව යොමු කරන්න",
+  "update_report": "වාර්තාව යාවත්කාලීන කරන්න",
+  "please_enter": "කරුණාකර ඇතුල් කරන්න",
+  "user_not_logged_in": "පරිශීලකයා ලොග් වී නැත",
+  "failed_submit_report": "වාර්තාව යොමු කිරීමට අසමත් විය.",
+
+
+  "welcome_title": "ආයුබෝවන්!",
+  "sign_in_success": "ඔබ සාර්ථකව පිවිසි ඇත.",
+  "redirect_farmer_dashboard": "ගොවි මූල් පිටුවට මාරු වෙමින්...",
+   
+  
+  "crop_calendar": "වගා දින දර්ශනය",
+  "select_date_info": "වගා විස්තර බැලීමට දිනයක් තෝරන්න.",
+
+  
+  "enter_full_name": "සම්පූර්ණ නම ඇතුල් කරන්න",
+  "user_type": "පරිශීලක වර්ගය",
+  "enter_mobile_number": "ජංගම අංකය ඇතුල් කරන්න",
+  "update": "අලුත් කරන්න",
+  "updating": "අලුත් වෙමින්...",
+  "update_success": "✅ ගිණුම සාර්ථකව අලුත් විය!",
+  "update_failed": "❌ ගිණුම අලුත් කිරීම අසාර්ථකයි",
+  "error": "❗ දෝෂයක්",
+  "fill_at_least_one": "අවම වශයෙන් එක් ක්ෂේත්‍රයක් වත් පුරවන්න.",
+
+
+  "confirm_delete_account": "ගිණුම මකා දැමීමට තහවුරු කරන්න",
+  "are_you_sure_delete": "ඔබට ඔබගේ ගිණුම මකා දැමීමට අවශ්‍ය බව විශ්වාසද?",
+  "no": "නැහැ",
+  "yes": "ඔව්",
+  "deleting_profile_wait": "ගිණුම මකා දැමීම සිදු වෙමින් පවතී, කරුණාකර රැඳී සිටින්න...",
+
+
+  "password_change": "මුරපදය වෙනස් කිරීම",
+  "current_password": "වර්තමාන මුරපදය",
+  "enter_current_password": "වර්තමාන මුරපදය ඇතුල් කරන්න",
+  "new_password": "නව මුරපදය",
+  "minimum_6_characters": "අවම අක්ෂර 6ක් අවශ්‍යයි",
+  "confirm_your_password": "ඔබේ මුරපදය තහවුරු කරන්න",
+  "new_and_confirm_mismatch": "නව මුරපදය සහ තහවුරු මුරපදය ගැලපෙන්නේ නැහැ.",
+  "password_updated_success": "✅ මුරපදය සාර්ථකව යාවත්කාලීන කරන ලදි!",
+
+
+  "confirm_logout": "ඉවත් වීමට තහවුරු කරන්න",
+  "are_you_sure_logout": "ඔබට ඉවත් වීමට අවශ්‍ය බව විශ්වාසද?",
+  "cancel": "අවලංගු කරන්න",
+  "logged_out_success": "සාර්ථකව ඉවත් විය",
+
+
+  "cultivation_details": "වගා විස්තර",
+  "days_remaining": "වගා භූමියට දින ගණන:",
+  "no_data": "වගා දත්ත නොමැත",
+  "member_id": "සාමාජික අංකය",
+  "category": "වර්ගය",
+  "crop": "වගාව",
+  "location": "ස්ථානය",
+  "start_date": "ආරම්භ දිනය",
+  "nic": "ජා. හැ. අංකය",
+  "crop_yield_size": "අස්වැන්න ප්‍රමාණය",
+  "confirm_delete": "ඉවත් කිරීම තහවුරු කරන්න",
+  "confirm_delete_msg": "මෙම වගාව ඉවත් කිරීමට ඔබට අවශ්‍යද?",
+  "delete": "ඉවත් කරන්න",
+  "acres": "අක්කර",
+
+
+  "edit_your_details": "ඔබේ විස්තර",
+  "add_cultivation": "ව්‍යාපාරය එකතු කරන්න",
+  "edit_cultivation": "ව්‍යාපාරය සංස්කරණය කරන්න",
+  "select_category": "වර්ගය තෝරන්න*",
+  "select_crop": "බෝගය තෝරන්න*",
+  "select_district": "දිස්ත්‍රික්කය තෝරන්න*",
+  "select_city": "නගරය තෝරන්න*",
+  "location_address": "ලිපිනය*",
+  "submit": "යවන්න",
+  "required_field_error": "මෙම ක්ෂේත්‍රය අත්‍යවශ්‍යයි",
+  "please_fill_required": "කරුණාකර සියලු අත්‍යවශ්‍ය ක්ෂේත්‍ර පුරවන්න (බෝග අස්වැන්න ප්‍රමාණය තෝරාගන්න)",
+  "crop_yield_size_text": "බෝග අස්වැන්න ප්‍රමාණය",
+
+
+   "new_update_form": {
+    "new_crop_update": "වගා යාවත්කාලීන කිරීම",
+    "edit_crop_update": "වගා යාවත්කාලීන කිරීම සංස්කරණය කරන්න",
+    "date": "දිනය",
+    "please_select_date": "කරුණාකර දිනය තෝරන්න",
+    "select_crop_update": "වගා යාවත්කාලීනය තෝරන්න",
+    "please_select_crop_update": "කරුණාකර වගා යාවත්කාලීනය තෝරන්න",
+    "fertilizer_type": "පොහොර වර්ගය",
+    "please_select_fertilizer_type": "කරුණාකර පොහොර වර්ගය තෝරන්න",
+    "amount": "ප්‍රමාණය",
+    "enter_amount": "ප්‍රමාණය ඇතුල් කරන්න",
+    "enter_valid_number": "වලංගු සංඛ්‍යාවක් ඇතුල් කරන්න",
+    "unit": "ඒකකය",
+    "select_unit": "ඒකකය තෝරන්න",
+    "description_label": "වගා යාවත්කාලීනය පිළිබඳ විස්තරය..",
+    "please_enter_description": "කරුණාකර විස්තරයක් ඇතුල් කරන්න",
+    "submit": "ඉදිරිපත් කරන්න",
+    "update": "යාවත්කාලීන කරන්න",
+    "days_since_planting": "පැල වලට දින ගණන: ",
+    
+
+    "crop_updates": {
+    "soil_preparation": "බිම සකස් කිරීම",
+    "seed_selection_and_nursery": "බීජ තේරීම සහ බීජ වගාව",
+    "transplanting": "රෝපණය (වගා කිරීම)",
+    "fertilizing": "පොහොර යෙදීම",
+    "watering": "ජල සපයීම (පෙරලීම)",
+    "weeding_and_control": "වාලි කිරීම සහ නියමිත පාලනය",
+    "growth_monitoring": "වර්ධනය පරික්ෂා කිරීම",
+    "yield_estimation": "අස්වනු තක්සේරු කිරීම",
+    "harvesting": "අස්වනු කිරීම",
+    "storage": "අස්වනු ගබඩා කිරීම",
+    "distribution": "අස්වනු බෙදාහැරීම"
+  },
+    
+
+    "fertilizer_types": {
+      "organic":"ජෛව පොහොර (Organic)",
+      "chemical":"රසායනික පොහොර (Chemical)",
+      "mixed":"මිශ්‍ර පොහොර (Mixed or Compound)"
+    },
+
+    
+    "units": [
+      "Kg",
+      "g",
+      "l",
+      "ml"
+    ]
+  },
+
+ 
+  "no_updates": "වගා යාවත්කාලීන කිරීමක් නොමැත",
+  "planting_days": "රෝපණයෙන් පසු ගතවූ දින ගණන: {days}",
+  "fertilizer_type": "පොහොර වර්ගය: {type}",
+  "fertilizer_amount": "පොහොර ප්‍රමාණය: {amount}} {{unit}",
+  "delete_message": "මෙම වගා යාවත්කාලීන කිරීම මකා දැමීමට ඔබට විශ්වාසද?"
+  
+
+
+ 
+
+
+
+
+
+}
